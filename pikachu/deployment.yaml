@@ -12,6 +12,6 @@ destination:
 syncPolicy:
   automated:
     prune: true
-    selfHeal: true
+    selfHeal: false
   syncOptions:
     - CreateNamespace=false
