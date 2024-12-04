@@ -1,0 +1,17 @@
+project: default
+source:
+  repoURL: https://github.com/catemlitten/helm-charts.git
+  path: pikachu
+  helm:
+    parameters:
+      - name: namespace
+        value: default
+destination:
+  server: https://kubernetes.default.svc
+  namespace: default
+syncPolicy:
+  automated:
+    prune: true
+    selfHeal: true
+  syncOptions:
+    - CreateNamespace=false
